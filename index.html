@@ -9,21 +9,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="焕新计划">
-    <meta name="theme-color" content="#FDFCF8">
+    <!-- Updated theme color to match the pink icon -->
+    <meta name="theme-color" content="#FFC2D1">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-    
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
 
-    <!-- Favicon (Updated to Pink Pig Nose) -->
-    <link rel="icon" type="image/svg+xml" href="/icon.svg">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23FFC2D1%22 rx=%2220%22/><text y=%2250%22 x=%2250%22 dy=%22.35em%22 text-anchor=%22middle%22 font-size=%2260%22>🐽</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23FFC2D1%22/><text y=%2250%22 x=%2250%22 dy=%22.35em%22 text-anchor=%22middle%22 font-size=%2260%22>🐽</text></svg>">
+    <!-- Icons -->
+    <!-- Browsers -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg?v=2">
+    <!-- iOS Safari: Technically requires PNG. Trying SVG as best-effort fallback. 
+         If this fails on your iPhone, please convert public/icon.svg to public/icon.png and update this line. -->
+    <link rel="apple-touch-icon" href="/icon.svg?v=2">
 
     <!-- Tailwind CSS (CDN is fine for simple usage) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,11 +34,11 @@
             },
             colors: {
               brand: {
-                50: '#F4F6F5',
-                100: '#E6EBE8',
-                500: '#9CAD9F',
-                600: '#8A9B8D',
-                700: '#758578',
+                50: '#FFF0F3',  /* More Pinkish tint for light bg */
+                100: '#FFE3E8',
+                500: '#FFC2D1', /* Main Pink */
+                600: '#FF9EB5',
+                700: '#FF7A99',
               },
               accent: {
                 50: '#FDF5F5',
@@ -72,7 +70,7 @@
       }
       ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: transparent; }
-      ::-webkit-scrollbar-thumb { background-color: #D1D5DB; border-radius: 20px; }
+      ::-webkit-scrollbar-thumb { background-color: #FFC2D1; border-radius: 20px; }
       
       .animate-fade-in { animation: fadeIn 0.2s ease-out; }
       .animate-slide-up { animation: slideUp 0.3s ease-out; }
