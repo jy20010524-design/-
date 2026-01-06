@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>2026 焕新计划</title>
+    
+    <!-- iOS / Android Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="焕新计划">
+    <meta name="theme-color" content="#FDFCF8">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%239CAD9F%22 rx=%2220%22/><text y=%2250%22 x=%2250%22 dy=%22.35em%22 text-anchor=%22middle%22 font-size=%2260%22>🌱</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%239CAD9F%22/><text y=%2250%22 x=%2250%22 dy=%22.35em%22 text-anchor=%22middle%22 font-size=%2260%22>🌱</text></svg>">
+
+    <!-- Tailwind CSS (CDN is fine for simple usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#F4F6F5',
+                100: '#E6EBE8',
+                500: '#9CAD9F',
+                600: '#8A9B8D',
+                700: '#758578',
+              },
+              accent: {
+                50: '#FDF5F5',
+                100: '#FAEBEB',
+                500: '#D99F99',
+                600: '#C48983',
+                700: '#A8736E',
+              },
+              gray: {
+                800: '#5E5E5E',
+                500: '#8C8C8C',
+              }
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '3xl': '1.5rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDFCF8;
+        color: #5E5E5E;
+        font-family: 'Quicksand', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background-color: #D1D5DB; border-radius: 20px; }
+      
+      .animate-fade-in { animation: fadeIn 0.2s ease-out; }
+      .animate-slide-up { animation: slideUp 0.3s ease-out; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "chart.js/": "https://esm.sh/chart.js@^4.5.1/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "react-chartjs-2": "https://esm.sh/react-chartjs-2@^5.3.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Vite Entry Point -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
