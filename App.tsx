@@ -322,16 +322,22 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen pb-32 text-gray-800 font-sans selection:bg-brand-100">
-      {/* Toast */}
+      {/* Toast - Moved slightly lower to avoid dynamic island overlap if safe area is ignored */}
       {toastMessage && (
-        <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[80] animate-fade-in px-6 py-3 bg-gray-800/90 backdrop-blur text-white text-sm font-bold rounded-full shadow-xl flex items-center gap-3 w-max max-w-[90%] justify-center">
+        <div 
+          className="fixed left-1/2 -translate-x-1/2 z-[80] animate-fade-in px-6 py-3 bg-gray-800/90 backdrop-blur text-white text-sm font-bold rounded-full shadow-xl flex items-center gap-3 w-max max-w-[90%] justify-center"
+          style={{ top: 'calc(env(safe-area-inset-top) + 20px)' }}
+        >
            <Award size={18} className="text-yellow-400 shrink-0" />
            <span className="truncate">{toastMessage}</span>
         </div>
       )}
 
-      {/* Header */}
-      <header className="sticky top-0 z-30 bg-[#FDFCF8]/90 backdrop-blur-md border-b border-gray-100/50 transition-all">
+      {/* Header with Safe Area Padding */}
+      <header 
+        className="sticky top-0 z-30 bg-[#FDFCF8]/90 backdrop-blur-md border-b border-gray-100/50 transition-all"
+        style={{ paddingTop: 'env(safe-area-inset-top)' }}
+      >
         {isEditMode ? (
           <div className="bg-brand-500 text-white p-3 text-center text-sm font-bold flex items-center justify-between px-6 animate-slide-up">
             <span>点击任意卡片修改图标和颜色</span>
