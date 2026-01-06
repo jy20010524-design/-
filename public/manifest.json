@@ -1,0 +1,16 @@
+{
+  "name": "2026 焕新计划",
+  "short_name": "焕新计划",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCF8",
+  "theme_color": "#FDFCF8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
